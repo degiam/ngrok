@@ -1,9 +1,17 @@
-[[redirects]]
-  from = "/check"
-  to = "/.netlify/functions/check"
-  status = 200
+[build]
+  command = "npm install"
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = [
+    "public/index.html",
+    "public/img.avif"
+  ]
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/server/:splat"
   status = 200
+  force = true

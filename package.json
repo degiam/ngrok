@@ -1,0 +1,11 @@
+{
+  "name": "degiam-ngrok",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0",
+    "http-proxy": "^1.18.1",
+    "serverless-http": "^3.2.0"
+  }
+}
